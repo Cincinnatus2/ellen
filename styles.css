@@ -90,6 +90,10 @@ nav a {
   color: var(--muted);
 }
 
+nav a[aria-current="page"] {
+  color: var(--green);
+}
+
 nav a:hover,
 .text-link:hover {
   color: #a2573d;
@@ -238,6 +242,15 @@ h2 {
   line-height: 1.55;
 }
 
+.bio-heading {
+  margin: 1.8rem 0 0.45rem;
+  color: var(--green);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 .about-copy .text-link {
   display: inline-block;
   margin-top: 0.5rem;
@@ -342,6 +355,136 @@ h2 {
   font-size: 1rem;
 }
 
+.home-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding-block: 2rem 5rem;
+}
+
+.home-links a {
+  position: relative;
+  display: flex;
+  min-height: 10rem;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  text-decoration: none;
+}
+
+.home-links .eyebrow {
+  margin-bottom: 0.5rem;
+}
+
+.home-link-title {
+  max-width: 12rem;
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.home-link-arrow {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  color: #a2573d;
+}
+
+.page-hero {
+  padding: 7rem max(7vw, calc((100vw - 66rem) / 2)) 6rem;
+  background: var(--green);
+  color: var(--paper);
+}
+
+.page-hero .eyebrow {
+  color: #d7b99b;
+}
+
+.page-hero h1 {
+  font-size: clamp(4rem, 9vw, 7rem);
+}
+
+.page-hero h1 span {
+  color: #dbcab2;
+}
+
+.page-intro {
+  max-width: 38rem;
+  margin: 1.5rem 0 0;
+  color: #e0e3dc;
+  font-family: var(--serif);
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+.book-details,
+.blurbs {
+  padding-block: 6rem;
+}
+
+.book-details h2 {
+  max-width: 48rem;
+}
+
+.publisher {
+  margin: 1rem 0 1.75rem;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 1.2rem;
+}
+
+.book-details .text-link {
+  color: var(--green);
+}
+
+.blurbs {
+  border-top: 1px solid var(--line);
+}
+
+.blurbs > p:last-child {
+  max-width: 40rem;
+  color: var(--muted);
+}
+
+.poems-list {
+  padding-block: 5rem 7rem;
+}
+
+.contact-links {
+  display: grid;
+  gap: 0;
+  padding-block: 5rem 7rem;
+}
+
+.contact-links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+}
+
+.contact-links a:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.contact-links .work-title {
+  display: block;
+  margin-top: 0.3rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
 .site-footer {
   flex-wrap: wrap;
   gap: 0.5rem 2rem;
@@ -389,6 +532,20 @@ h2 {
   .elsewhere {
     padding-block: 5rem;
   }
+
+  .page-hero {
+    padding: 5rem 8vw;
+  }
+
+  .home-links {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding-block: 1rem 4rem;
+  }
+
+  .home-links a {
+    min-height: 8rem;
+  }
 }
 
 @media (max-width: 520px) {
@@ -405,7 +562,10 @@ h2 {
   }
 
   nav {
-    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.25rem 0.75rem;
+    max-width: 15rem;
   }
 
   nav a {
