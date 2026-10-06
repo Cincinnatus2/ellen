@@ -450,10 +450,23 @@ h2 {
   padding-block: 5rem 7rem;
 }
 
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(14rem, 0.7fr) 1.3fr;
+  align-items: center;
+  gap: 5rem;
+  padding-block: 5rem 7rem;
+}
+
+.contact-portrait {
+  width: min(100%, 20rem);
+  justify-self: center;
+}
+
 .contact-links {
   display: grid;
+  align-content: center;
   gap: 0;
-  padding-block: 5rem 7rem;
 }
 
 .contact-links a {
@@ -473,6 +486,19 @@ h2 {
 .contact-links .work-title {
   display: block;
   margin-top: 0.3rem;
+}
+
+@media (max-width: 760px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .contact-layout {
+    padding-block: 4rem 5rem;
+  }
 }
 
 .visually-hidden {
