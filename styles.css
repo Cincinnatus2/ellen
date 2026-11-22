@@ -512,7 +512,7 @@ h2 {
 .book-cover {
   position: relative;
   margin: 0;
-  width: 100%;
+  width: min(100%, 31.25rem);
 }
 
 .book-cover::before {
