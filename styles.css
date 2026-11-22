@@ -806,8 +806,8 @@ h2 {
   position: relative;
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+  aspect-ratio: auto;
+  object-fit: contain;
   object-position: center;
   z-index: 1;
   background: #d2c5b1;
