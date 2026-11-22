@@ -6,8 +6,12 @@
   --muted: #686e63;
   --green: #314536;
   --line: #d8d1c3;
-  --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --serif: "Garamond", "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  --hero-bg: #7c7ccf;
+  --hero-accent: #2d5986;
+  --hero-text: #bbccdd;
+  --hero-super: #f7e6ff;
 }
 
 * {
@@ -59,7 +63,15 @@ a:focus-visible {
 }
 
 .site-header {
-  border-bottom: 1px solid var(--line);
+  border-bottom: none;
+  background: transparent;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: clamp(1.25rem, 4vw, 3.5rem);
+  width: 100%;
 }
 
 .wordmark {
@@ -108,7 +120,7 @@ nav a:hover,
   gap: 5vw;
   overflow: hidden;
   padding: 5rem 12vw 6rem;
-  background: var(--green);
+  background: var(--hero-bg);
   color: var(--paper);
 }
 
@@ -128,7 +140,12 @@ nav a:hover,
 }
 
 .hero .eyebrow {
-  color: #d7b99b;
+  color: var(--hero-super);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 1.15rem;
 }
 
 h1,
@@ -148,6 +165,7 @@ h1 {
 .hero h1 {
   font-size: clamp(2.3rem, 7.5vw, 7.4rem);
   white-space: nowrap;
+  color: var(--hero-text);
 }
 
 h1 em {
@@ -178,7 +196,7 @@ h1 em {
 .portrait::before {
   position: absolute;
   inset: 1rem -1rem -1rem 1rem;
-  border: 1px solid rgb(245 241 232 / 45%);
+  border: 2px solid var(--hero-accent);
   content: "";
 }
 
@@ -209,6 +227,14 @@ h1 em {
   font-size: 0.8rem;
   font-style: italic;
   letter-spacing: 0.08em;
+}
+
+.hero-urn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 1.2rem;
+  opacity: 0.9;
 }
 
 .section-wrap {
