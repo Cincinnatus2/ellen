@@ -546,7 +546,7 @@ h2 {
 .sophies-sketch {
   position: relative;
   margin: 0;
-  width: 70%;
+  width: min(100%, 28rem);
   margin-left: auto;
 }
 
