@@ -26,10 +26,24 @@
 
     <main id="main">
       <section class="contact-hero" aria-labelledby="contact-title">
-        <div class="hero-urn-contact" aria-hidden="true">🏺</div>
         <div class="contact-hero-layout">
           <div class="contact-left">
             <h1 id="contact-title">Contact</h1>
+            <form class="contact-form" action="#" method="POST">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Send</button>
+            </form>
           </div>
           <figure class="contact-photo">
             <img
@@ -43,24 +57,8 @@
 
       <section class="contact-content section-wrap" aria-labelledby="form-title">
         <div class="contact-block">
-          <h2 class="visually-hidden" id="form-title">Contact form and links</h2>
+          <h2 class="visually-hidden" id="form-title">Contact links</h2>
           
-          <form class="contact-form" action="#" method="POST">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="6" required></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Send</button>
-          </form>
-
           <div class="contact-links">
             <p>
               <a href="https://louisvillereview.org/we-left-a-window-open-to-the-sea" target="_blank" rel="noopener noreferrer">Book at The Review Louisville</a>
