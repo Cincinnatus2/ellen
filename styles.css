@@ -428,6 +428,156 @@ h2 {
   color: var(--paper);
 }
 
+.page-hero.book-hero {
+  background: var(--hero-bg);
+  color: var(--paper);
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: flex-start;
+  gap: 5rem;
+  position: relative;
+  padding: 5rem 10vw;
+}
+
+.book-hero h1 {
+  color: var(--hero-text);
+  font-size: clamp(2.5rem, 7vw, 4rem);
+  margin-bottom: 1.5rem;
+}
+
+.book-hero .eyebrow {
+  color: var(--hero-super);
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  text-transform: none;
+  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+}
+
+.book-hero-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.book-award {
+  color: #e0e3dc;
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.book-award a {
+  color: #f3dfc7;
+}
+
+.book-blurbs-intro {
+  color: var(--hero-super);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+}
+
+.book-blurbs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.blurb {
+  color: #e0e3dc;
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.blurb p {
+  margin: 0;
+}
+
+.blurb strong {
+  color: var(--hero-super);
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.book-images {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  position: relative;
+}
+
+.book-cover {
+  position: relative;
+  margin: 0;
+  width: 100%;
+}
+
+.book-cover::before {
+  position: absolute;
+  inset: 1rem -1rem -1rem 1rem;
+  border: 2px solid var(--hero-accent);
+  content: "";
+  z-index: 0;
+}
+
+.book-cover img {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  background: #d2c5b1;
+}
+
+.book-cover figcaption {
+  position: relative;
+  margin-top: 0.9rem;
+  color: #e0e3dc;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+}
+
+.sophies-sketch {
+  position: relative;
+  margin: 0;
+  width: 70%;
+  margin-left: auto;
+}
+
+.sophies-sketch::before {
+  position: absolute;
+  inset: 0.6rem -0.6rem -0.6rem 0.6rem;
+  border: 2px solid var(--hero-accent);
+  content: "";
+  z-index: 0;
+}
+
+.sophies-sketch img {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  background: #d2c5b1;
+}
+
+.sophies-sketch figcaption {
+  position: relative;
+  margin-top: 0.75rem;
+  color: #e0e3dc;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+}
+
 .page-hero .eyebrow {
   color: #d7b99b;
 }
